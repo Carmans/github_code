@@ -12,11 +12,10 @@ import re
 
 # https://b2b.baidu.com/s?q=
 
-key = '建筑机械'
-url = 'https://b2b.baidu.com/s?q=' + key
-
-data = requests.get(url).text
-
+# key = '建筑机械'
+# url = 'https://b2b.baidu.com/s?q=' + key
+#
+# data = requests.get(url).text
 
 # tit = '"fullName":"(.*?)"'
 # alltit = re.compile(tit, re.S).findall(data)
@@ -26,8 +25,7 @@ data = requests.get(url).text
 #     print('--------------')
 
 
-
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2020/6/25 19:22
 # @Author  : Zhang Fei
@@ -36,6 +34,7 @@ data = requests.get(url).text
 # @Software: PyCharm
 
 import requests
+import json
 import re
 
 headers = {
@@ -49,9 +48,27 @@ url = 'https://b2b.baidu.com/s?q={}'.format(key)
 
 data = requests.get(url, headers=headers)
 
-print(data.text)
 
-print(data.status_code)
+# print(data.text)
+#
+# print(data.status_code)
+
+print(data.content.decode())
+
+
+# dict_ret = json.loads(data.content.decode())
+
+# dict_ret['window.data']
+
+
+# print(dict_ret)
+
+# 正则匹配返回的数据内容
+# location = '"window.data"'
+# alltit = re.compile(location, re.S).findall(dict_ret)
+#
+# print(alltit)
+
 
 # print(data.text)
 # print(data.encoding)
@@ -99,7 +116,3 @@ print(data.status_code)
 # if __name__ == '__main__':
 #     b2bSpider = B2bSpider("休闲食品")
 #     b2bSpider.run()
-
-
-
-
