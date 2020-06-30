@@ -78,15 +78,16 @@ print(data.content.decode())
 # print(data.content.decode('utf-8'))
 
 # 正则匹配返回结果
-# tit = '"fullName":"(.*?)"'
+tit = '"fullName":"(.*?)"'
 # location = '"location":"(.*?)"'
-# alltit = re.compile(tit, re.S).findall(data)
+alltit = re.compile(tit, re.S).findall(data)
+# print(alltit)
 # # alltit = re.compile(location, re.S).findall(data)
-# for item in alltit:
-#     print('标题: ' + eval('u"' + str(item) + '"'))
-# # print('地址: ' + eval('u"' + str(item) + '"'))
-# # eval 将字符串str当成有效的表达式子来求值并返回计算结果
-# print('--------------')
+for item in alltit:
+    print('标题: ' + eval('u"' + str(item) + '"'))
+# print('地址: ' + eval('u"' + str(item) + '"'))
+# eval 将字符串str当成有效的表达式子来求值并返回计算结果
+print('--------------')
 
 
 # print(url.ecode('utf-8'))

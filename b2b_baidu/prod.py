@@ -1,46 +1,56 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2020/6/25 19:22
-# @Author  : Zhang Fei
-# @Site    :
-# @File    : b2b_baidu.py
-# @Software: PyCharm
+# 爱采购主表商品主页数据采集
 
 import requests
 import re
+import json
+import xlwt
 
 
-class B2bSpider:
-    def __init__(self, search_name):
-        self.search = search_name
-        self.url_temp = "https://b2b.baidu.com/s?q=" + search_name
-        self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
-        }
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
+}
 
-    # 构造URL列表
-    def get_url_list(self):  # 1.构造url列表
+# URL参数
+key = '休闲食品'
+csrf_token = 'a51821a6d744d5064082fa91d3b26915'
+logid = '2583038114855184162'
+temp = '1593492141433'
+
+# 构造url
+url = 'https://b2b.baidu.com/s/a?ajax=1&csrf_token={}'.format(csrf_token) + '&logid={}'.format(
+    logid) + '&' + '_={}'.format(temp) + '&o=0&q={}'.format(
+    key) + '&p=2&sa=&mk=全部结果&f=[]&s=30&adn=0&resType=product&fn={"select_param0":"品牌","select_param1":"产品类别","select_param2":"口味"}'
+
+# data = requests.get(url)
+
+#请求数据
+data = requests.get(url, headers=headers)
+ret = data.content.decode('utf-8')
+
+print("响应体内容的数据类型为 %s " % type(ret))
+print(ret)
+
+#请求结果转换为字典
+jsondata = json.loads(ret)
+
+print("转换为json对象之后的数据类型为 %s " % type(jsondata))
+print(jsondata)
+
+# print(jsondata['data'])
+
+#数据解析[提取商品信息]
+temp = jsondata['data']['productList']
+
+print(type(temp))
+
+print(temp)
+
+# 提取商品详情信息
+# productList=jsondata.get('productList')
 
 
+# productList = jsondata['productList']
+#
+# print(productList)
+# print(type(productList))
 
-
-    # 发送请求，获取响应
-    def parse_url(self, url):
-
-
-
-    # 保存html字符串
-    def save_excel(self, html_str, page_num):  # 保存html字符串
-
-    # 实现主要逻辑
-    def run(self):
-        # 1.构造url列表
-
-        # 2.遍历，发送请求，获取响应
-
-        # 3.保存
-
-
-if __name__ == '__main__':
-    b2bSpider = B2bSpider("休闲食品")
-    b2bSpider.run()
