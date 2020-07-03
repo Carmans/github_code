@@ -64,3 +64,52 @@ print(type(alltit))
 # productList=jsondata.get('productList')
 #
 # print(productList)
+
+
+
+
+
+
+
+
+# dict_ret = json.loads(data.content.decode())
+
+# dict_ret['window.data']
+
+
+# print(dict_ret)
+
+# 正则匹配返回的数据内容
+# location = '"window.data"'
+# alltit = re.compile(location, re.S).findall(dict_ret)
+#
+# print(alltit)
+
+
+# print(data.text)
+# print(data.encoding)
+
+# print(data.url)
+# print(data.encoding)
+# print(data.content.decode('utf-8'))
+
+# 正则匹配返回结果
+tit = '"fullName":"(.*?)"'
+# location = '"location":"(.*?)"'
+alltit = re.compile(tit, re.S).findall(data)
+# print(alltit)
+# # alltit = re.compile(location, re.S).findall(data)
+for item in alltit:
+    print('标题: ' + eval('u"' + str(item) + '"'))
+# print('地址: ' + eval('u"' + str(item) + '"'))
+# eval 将字符串str当成有效的表达式子来求值并返回计算结果
+print('--------------')
+
+
+# print(url.ecode('utf-8'))
+
+# r=requests.get(url,headers=headers)
+#
+#
+# print(r.status_code)
+# print(r.request.url)
