@@ -10,6 +10,7 @@
 import requests
 import json
 import re
+import ast
 
 #构造请求头
 headers = {
@@ -41,9 +42,48 @@ str2= 'window.status =';
 print('--------------------------------------------------------------------------------')
 #提取返回的结果的数据信息
 data=data[data.index(str1):]
-data=data[:data.index(str2)].replace('window.data =','')
+data=data[:data.index(str2)].replace('window.data =','').replace(';','')
 
-data=list(data)
+
+#直接转换为 list
+# data=list(data)
+
+#转换为json对象的测试
+data=json.loads(data)
+
+# data=data.readline()
+
+# data=eval(data)
+# data=ast.literal_eval(data)
 
 print(type(data))
 print(data)
+
+#供货方信息提取
+provider=data['provider']
+print(provider)
+
+
+#卖家信息
+sellerInfo=data['sellerInfo']
+print(sellerInfo)
+
+
+#获取商品详情信息
+item=data['item']
+
+#商品价格信息
+priceList=item['priceList']
+print('商品价格信息: %s ' % priceList)
+
+#商品标题
+fullName=item['fullName']
+print('商品标题: %s ' % fullName)
+
+#提取商品图片相关的信息
+picList=item['picList']
+print('提取商品图片相关的信息: %s ' % picList)
+
+
+
+

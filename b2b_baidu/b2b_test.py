@@ -1,6 +1,6 @@
 import json
 
-data = '''{
+detail_data = '''{
 	"query": "",
 	"iswapurl": "0",
 	"provider": {
@@ -97,12 +97,12 @@ data = '''{
     }
 }'''
 
+print(type(detail_data))
+
+detail_data = json.loads(detail_data)
+
+print(type(detail_data))
+
+print(detail_data)
 
 
-print(type(data))
-
-data = json.loads(data)
-
-print(type(data))
-
-print(data)
