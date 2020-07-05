@@ -85,5 +85,3 @@ picList=item['picList']
 print('提取商品图片相关的信息: %s ' % picList)
 
 
-
-
