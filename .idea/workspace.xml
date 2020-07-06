@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b46f80d-fbd6-4070-b6d2-1f05edcc2c6b" name="Default Changelist" comment="">
+    <list default="true" id="4b46f80d-fbd6-4070-b6d2-1f05edcc2c6b" name="Default Changelist" comment="商品详情页爬取和商品主页数据爬取代码的连贯">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/b2b_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/b2b_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/parse_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/parse_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/prod.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,8 +188,8 @@
       <list>
         <item itemvalue="Python.prod" />
         <item itemvalue="Python.parse_test" />
-        <item itemvalue="Python.prod_item" />
         <item itemvalue="Python.b2b_test" />
+        <item itemvalue="Python.prod_item" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -204,7 +207,8 @@
       <workItem from="1593443179846" duration="5732000" />
       <workItem from="1593701888868" duration="5312000" />
       <workItem from="1593753423582" duration="4000" />
-      <workItem from="1593753435828" duration="24932000" />
+      <workItem from="1593753435828" duration="25069000" />
+      <workItem from="1594009634833" duration="10892000" />
     </task>
     <task id="LOCAL-00001" summary="网站解析部分的代码的编写">
       <created>1593474343326</created>
@@ -227,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593946908938</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="商品详情页爬取和商品主页数据爬取代码的连贯">
+      <created>1593946967400</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593946967400</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +254,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="网站解析部分的代码的编写" />
@@ -255,11 +267,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="523" y="279" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593443664015" />
-    <state x="459" y="0" key="CommitChangelistDialog2" timestamp="1593946907974">
+    <state x="459" y="0" key="CommitChangelistDialog2" timestamp="1593947089055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="367" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1593474341932" />
-    <state x="459" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946907974" />
+    <state x="459" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593947089055" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1593445602057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -272,30 +284,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="109" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593443839537" />
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom" timestamp="1593946819838">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594041358616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1031" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946819838" />
-    <state width="1860" height="282" key="GridCell.Tab.0.center" timestamp="1593946819838">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594041358616" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594041358616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1031" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
-    <state width="1860" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946819838" />
-    <state width="1860" height="282" key="GridCell.Tab.0.left" timestamp="1593946819838">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594041358616" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594041358616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1031" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093158" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
-    <state width="1860" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946819838" />
-    <state width="1860" height="282" key="GridCell.Tab.0.right" timestamp="1593946819838">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594041358616" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594041358616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1031" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
-    <state width="1860" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946819838" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594041358616" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1594011618878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594011618878" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1594011618878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594011618878" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1594011618878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594011618878" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1594011618878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594011618878" />
     <state x="116" y="40" width="996" height="738" key="SettingsEditor" timestamp="1593916883752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -305,15 +333,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593929325343" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593946942223">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593947066139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1593474345341" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593946942223" />
-    <state x="2250" y="0" width="1606" height="811" key="dock-window-1" timestamp="1593916857943">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593947066139" />
+    <state x="1920" y="0" width="1694" height="716" key="dock-window-1" timestamp="1594041374724">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2250" y="0" width="1606" height="811" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593916857943" />
+    <state x="1920" y="0" width="1694" height="716" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594041374724" />
     <state x="92" y="92" width="1736" height="856" key="dock-window-2" timestamp="1593933601393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -329,11 +357,11 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593942122817" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/github_code$b2b_test.coverage" NAME="b2b_test Coverage Results" MODIFIED="1593941374464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$b2b_test.coverage" NAME="b2b_test Coverage Results" MODIFIED="1594013804678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$main.coverage" NAME="main Coverage Results" MODIFIED="1593729093147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$prod_item.coverage" NAME="prod_item Coverage Results" MODIFIED="1593945424675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$code_utf8.coverage" NAME="code_utf8 Coverage Results" MODIFIED="1593728003993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$parse_test.coverage" NAME="parse_test Coverage Results" MODIFIED="1593946794937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$prod.coverage" NAME="prod Coverage Results" MODIFIED="1593946819833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$parse_test.coverage" NAME="parse_test Coverage Results" MODIFIED="1594017837548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$prod.coverage" NAME="prod Coverage Results" MODIFIED="1594041358610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
   </component>
 </project>
