@@ -7,12 +7,14 @@
 # @Software: PyCharm
 # 爱采购主表商品主页数据采集
 
+import urllib.request
 import requests
 import re
 import json
 import xlwt
 import math
 import ast
+import os
 
 # 请求头
 headers = {
@@ -24,7 +26,8 @@ csrf_token = 'a51821a6d744d5064082fa91d3b26915'
 logid = '2583038114855184162'
 temp = '1593492141433'
 p = 0
-key = input('请输入要爬取的内容: ')
+# key = input('请输入要爬取的内容: ')
+key = '休闲食品'
 
 # 构造url
 url = 'https://b2b.baidu.com/s/a?ajax=1&csrf_token={}'.format(csrf_token) + '&logid={}'.format(
@@ -139,9 +142,33 @@ for i in range(len(jUrl)):
     fullName = item['fullName']
     print('商品标题: %s ' % fullName)
 
+    # 商品69码
+    meta = item['meta']
+    # 存储69码
+    sku = ''
+    for i in range(len(meta)):
+        if meta[i]['k'] == '商品条形码':
+            sku = meta[i]['v']
+            break
+    print('商品69码: %s ' % sku)
+
     # 提取商品图片相关的信息
     picList = item['picList']
     print('提取商品图片相关的信息: %s ' % picList)
+
+    # 临时打印图片相关信息
+    print(type(picList))
+    print(len(picList))
+
+    #todo  urllib.error.HTTPError: HTTP Error 403: Forbidden 爬虫请求被拒
+    for i in range(len(picList)):
+        print(picList[i])
+        # 下载图片
+        # urllib.request.urlretrieve(picList[i],os.getcwd()+'\\sku={}'.format(sku)+'_'+i+'.JPEG')
+        urllib.request.urlretrieve(picList[i], os.getcwd() + '\\result.jpeg',headers=headers)
+        i += 1
+
+    break
 
     print('===================================================================')
 
@@ -151,3 +178,9 @@ for i in range(len(jUrl)):
     # print(data)
 
 # 休闲食品
+
+
+# 爬取的数据写入到excel内
+print('=======================数据写入excel,图片保存到文件夹开始==================================')
+
+print('=======================数据写入excel,图片保存到文件夹结束==================================')

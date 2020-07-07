@@ -85,3 +85,42 @@ picList=item['picList']
 print('提取商品图片相关的信息: %s ' % picList)
 
 
+
+
+
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2020/6/25 19:22
+# @Author  : Zhang Fei
+# @Site    :
+# @File    : b2b_baidu.py
+# @Software: PyCharm
+# 爱采购主表商品主页数据采集
+
+import requests
+import re
+import json
+import xlwt
+import math
+import ast
+
+
+data = [{'k': '品种', 'v': '夹心饼干'}, {'k': '售卖方式', 'v': '包装'}, {'k': '商品条形码', 'v': '6928872808309'}, {'k': '包装系列', 'v': '简装系列'}, {'k': '保质期', 'v': '300'}, {'k': '产品标准号', 'v': 'GB/T 20980'}, {'k': '是否进口', 'v': '否'}, {'k': '原产地', 'v': '广东'}, {'k': '生产许可证编号', 'v': 'SC10844050701421'}, {'k': '口味', 'v': '黑糖味'}, {'k': '生产日期', 'v': '2019年4月'}, {'k': '储藏方法', 'v': '阴凉干燥'}, {'k': '净含量（规格）', 'v': '258g'}, {'k': '包装规格', 'v': '咸蛋黄258g,黑糖258g'}, {'k': '可售卖地', 'v': '全国'}, {'k': '货号', 'v': '6928872808309'}]
+
+print(type(data))
+print(data)
+
+
+sku=''
+for i in range(len(data)):
+    if data[i]['k']=='商品条形码':
+        sku=data[i]['v']
+        # print()
+        break
+    # print(data[i])
+
+print(sku)
+
+# sku=data[2]['v']
+# print(sku)
+# 解析数据

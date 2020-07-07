@@ -7,34 +7,9 @@
 # @Software: PyCharm
 # 爱采购主表商品主页数据采集
 
-import requests
-import re
-import json
-import xlwt
-import math
-import ast
+import urllib.request
+import os
 
-
-data = ''' window.pageQuery = {"id":"5724818bad838937b965ce2ba24531d8"};
-            window.logId = '2583023372096820602';
-            window.data = null;
-            window.status = '0';
-            window.msg = '';'''
-
-# print(type(data))
-# print(data)
-
-
-# 解析数据
-str1 = "window.data =";
-str2 = 'window.status =';
-# # 提取返回的结果的数据信息
-data = data[data.index(str1):]
-print(data)
-
-print("=============================")
-# data=data.replace('window.data =', '').replace(';', '')
-# data=data.index(str2)
-data = data[:data.index(str2)].replace('window.data =', '').replace(';', '')
-
-print(data)
+url = "https://t8.baidu.com/it/u=4090963933,2936018835&fm=199&app=68&f=JPEG?w=750&h=750&s=ABA6E507121F55EB72691C690300107B="  # 图片路径。
+dir = os.getcwd();  # 当前工作目录。
+urllib.request.urlretrieve(url, dir + '\\result.jpeg')  # 下载图片。
