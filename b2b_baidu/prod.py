@@ -18,6 +18,7 @@ import os
 
 # 请求头
 headers = {
+    "Referer": "https://b2b.baidu.com/land?url=https%3A%2F%2Fwww.zhaosw.com%2Fproduct%2Fdetail%2F7284259%3Fbdb2b8a2d%3D2583082754473465781&query=%E4%BC%91%E9%97%B2%E9%A3%9F%E5%93%81&category=%E9%A3%9F%E5%93%81%E7%94%9F%E9%B2%9C%3B%E9%A5%BC%E5%B9%B2%E8%86%A8%E5%8C%96%3B%E5%A4%B9%E5%BF%83%E9%A5%BC%E5%B9%B2",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
 }
 
@@ -160,27 +161,27 @@ for i in range(len(jUrl)):
     print(type(picList))
     print(len(picList))
 
-    #todo  urllib.error.HTTPError: HTTP Error 403: Forbidden 爬虫请求被拒
+    # todo  urllib.error.HTTPError: HTTP Error 403: Forbidden 爬虫请求被拒
     for i in range(len(picList)):
-        print(picList[i])
         # 下载图片
-        # urllib.request.urlretrieve(picList[i],os.getcwd()+'\\sku={}'.format(sku)+'_'+i+'.JPEG')
-        urllib.request.urlretrieve(picList[i], os.getcwd() + '\\result.jpeg',headers=headers)
+        os.makedirs('./image/', exist_ok=True)
+        r = requests.post(picList[i], headers=headers)
+        with open('./image/{}_'.format(sku)+'{}.jpg'.format(i), 'wb') as f:
+            for chunk in r.iter_content(chunk_size=1024):
+                # 图片缩放为指定大小
+
+
+                f.write(chunk)
         i += 1
+
+
+    # 爬取的数据写入到excel内
+    print('=======================数据写入excel,图片保存到文件夹开始==================================')
+
+
+
+    print('=======================数据写入excel,图片保存到文件夹结束==================================')
 
     break
 
-    print('===================================================================')
-
-    # #转换为json对象
-    # data=json.loads(data)
-    # print(type(data))
-    # print(data)
-
-# 休闲食品
-
-
-# 爬取的数据写入到excel内
-print('=======================数据写入excel,图片保存到文件夹开始==================================')
-
-print('=======================数据写入excel,图片保存到文件夹结束==================================')
+print('===================================================================')
