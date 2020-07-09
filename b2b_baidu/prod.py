@@ -7,13 +7,11 @@
 # @Software: PyCharm
 # 爱采购主表商品主页数据采集
 
-import urllib.request
+from PIL import Image
 import requests
-import re
 import json
 import xlwt
 import math
-import ast
 import os
 
 # 请求头
@@ -104,8 +102,19 @@ print(type(jUrl))
 print(len(jUrl))
 print(jUrl)
 
+
+# 处理图片， 输出为指定尺寸的
+def produceImage(file_in, file_out):
+    width = 210
+    height = 210
+    image = Image.open(file_in)
+    resized_image = image.resize((width, height), Image.ANTIALIAS)
+    resized_image.save(file_out)
+
+
 print('=======================请求商品详情页内容==================================')
 for i in range(len(jUrl)):
+    print(' 1   i的值为: %s:' % i)
     # print(jUrl[i])
     # 请求数据
     data = requests.get(jUrl[i], headers=headers).content.decode('utf-8')
@@ -127,6 +136,16 @@ for i in range(len(jUrl)):
     # 供货方信息提取
     provider = data['provider']
     print(provider)
+    #供货方名称
+    provider=data['provider']['status']
+    # 供货方状态
+    provider=data['provider']['name']
+
+    provider=data['provider']['name']
+    provider=data['provider']['name']
+    provider=data['provider']['name']
+    provider=data['provider']['name']
+    provider=data['provider']['name']
 
     # 卖家信息
     sellerInfo = data['sellerInfo']
@@ -145,13 +164,85 @@ for i in range(len(jUrl)):
 
     # 商品69码
     meta = item['meta']
-    # 存储69码
+    # 商品条形码
     sku = ''
-    for i in range(len(meta)):
-        if meta[i]['k'] == '商品条形码':
-            sku = meta[i]['v']
+    #品牌
+    brand=''
+    #保质期
+    Shelf_life=''
+    #原产地
+    place_of_origin=''
+    #是否进口
+    is_import=''
+    # 可售卖地
+    Sales_area=''
+    #等级
+    level=''
+    #品种
+    varieties=''
+    # 售卖方式
+    Selling_way=''
+    # 包装系列
+    Packaging_series=''
+    #产品标准号
+    Product_standard_No=''
+    # 生产许可证编号
+    Production_license=''
+    # 生产日期
+    created=''
+    # 储藏方法
+    Storage_method=''
+    # 净含量（规格）
+    specifications=''
+    # 货号
+    product_no=''
+    #包装规格
+    Packing_specification=''
+
+    print('  2     i的值为: %s:' % i)
+    for z in range(len(meta)):
+        if meta[z]['k'] == '商品条形码':
+            sku = meta[z]['v']
+        elif meta[i]['k'] == '品牌':
+            brand = meta[i]['v']
+        elif meta[i]['k'] == '保质期':
+            Shelf_life = meta[i]['v']
+        elif meta[i]['k'] == '原产地':
+            place_of_origin = meta[i]['v']
+        elif meta[i]['k'] == '是否进口':
+            is_import = meta[i]['v']
+        elif meta[i]['k'] == '可售卖地':
+            Sales_area= meta[i]['v']
+        elif meta[i]['k'] == '等级':
+            level = meta[i]['v']
+        elif meta[i]['k'] == '品种':
+            varieties = meta[i]['v']
+        elif meta[i]['k'] == '售卖方式':
+            Selling_way = meta[i]['v']
+        elif meta[i]['k'] == '包装系列':
+            Packaging_series = meta[i]['v']
+        elif meta[i]['k'] == '货号':
+            product_no = meta[i]['v']
+        elif meta[i]['k'] == '货号':
+            product_no = meta[i]['v']
+        elif meta[i]['k'] == '产品标准号':
+            Product_standard_No = meta[i]['v']
+        elif meta[i]['k'] == '生产许可证编号':
+            Production_license = meta[i]['v']
+        elif meta[i]['k'] == '生产日期':
+            created = meta[i]['v']
+        elif meta[i]['k'] == '储藏方法':
+            Storage_method = meta[i]['v']
+        elif meta[i]['k'] == '净含量':
+            specifications = meta[i]['v']
+        elif meta[i]['k'] == '包装规格':
+            Packing_specification = meta[i]['v']
+        else:
+            print('1')
             break
+
     print('商品69码: %s ' % sku)
+    print('商品品牌为: %s ' % brand)
 
     # 提取商品图片相关的信息
     picList = item['picList']
@@ -161,27 +252,87 @@ for i in range(len(jUrl)):
     print(type(picList))
     print(len(picList))
 
+    print('   3     i的值为: %s:' % i)
     # todo  urllib.error.HTTPError: HTTP Error 403: Forbidden 爬虫请求被拒
-    for i in range(len(picList)):
+    for j in range(len(picList)):
         # 下载图片
         os.makedirs('./image/', exist_ok=True)
-        r = requests.post(picList[i], headers=headers)
-        with open('./image/{}_'.format(sku)+'{}.jpg'.format(i), 'wb') as f:
+        r = requests.post(picList[j], headers=headers)
+        with open('./image/{}_'.format(sku) + '{}.jpg'.format(j), 'wb') as f:
             for chunk in r.iter_content(chunk_size=1024):
-                # 图片缩放为指定大小
-
-
                 f.write(chunk)
-        i += 1
 
+        # 图片缩放为指定大小
+        produceImage('./image/{}_'.format(sku) + '{}.jpg'.format(j), './image/{}_'.format(sku) + '{}.jpg'.format(j))
 
+        j += 1
+
+    print('   4    i的值为: %s:' % i)
     # 爬取的数据写入到excel内
     print('=======================数据写入excel,图片保存到文件夹开始==================================')
 
+    # 创建workbook（其实就是excel，后来保存一下就行）
+    workbook = xlwt.Workbook(encoding='utf-8')
+    # 创建表
+    worksheet = workbook.add_sheet('{}'.format(key))
+    # 往单元格内写入内容:写入表头
+    worksheet.write(0, 0, label="厂商名称")
+    worksheet.write(0, 1, label=brand)
+    worksheet.write(0, 2, label="子品牌")
+    worksheet.write(0, 3, label="商品品类1级")
+    worksheet.write(0, 4, label="商品品类2级")
+    worksheet.write(0, 5, label="商品名称")
+    worksheet.write(0, 6, label=sku)
+    worksheet.write(0, 7, label="单品规格")
+    worksheet.write(0, 8, label="单品计量")
+    worksheet.write(0, 9, label="单品计量单位")
+    worksheet.write(0, 10, label="销售规格")
+    worksheet.write(0, 11, label="销售规格系数")
+    worksheet.write(0, 12, label="销售指导价格")
+    worksheet.write(0, 13, label="")
+    worksheet.write(0, 14, label="商品描述")
+    worksheet.write(0, 15, label="商品详细描述")
+    worksheet.write(0, 16, label="备注")
+    worksheet.write(0, 17, label="箱码")
+    worksheet.write(0, 18, label="箱重")
+    worksheet.write(0, 19, label="箱重单位")
+    worksheet.write(0, 20, label="箱容")
+    worksheet.write(0, 21, label="箱容单位")
+    worksheet.write(0, 22, label=Packing_specification)
 
+    i += 1
+    print(i)
+    # 写入数据到excel
+    worksheet.write(i, 0, label="厂商名称")
+    worksheet.write(i, 1, label="品牌")
+    worksheet.write(i, 2, label="子品牌")
+    worksheet.write(i, 3, label="商品品类1级")
+    worksheet.write(i, 4, label="商品品类2级")
+    worksheet.write(i, 5, label="商品名称")
+    worksheet.write(i, 6, label=sku)
+    worksheet.write(i, 7, label="单品规格")
+    worksheet.write(i, 8, label="单品计量")
+    worksheet.write(i, 9, label="单品计量单位")
+    worksheet.write(i, 10, label="销售规格")
+    worksheet.write(i, 11, label="销售规格系数")
+    worksheet.write(i, 12, label="销售指导价格")
+    worksheet.write(i, 13, label="商品图片")
+    worksheet.write(i, 14, label="商品描述")
+    worksheet.write(i, 15, label="商品详细描述")
+    worksheet.write(i, 16, label="备注")
+    worksheet.write(i, 17, label="箱码")
+    worksheet.write(i, 18, label="箱重")
+    worksheet.write(i, 19, label="箱重单位")
+    worksheet.write(i, 20, label="箱容")
+    worksheet.write(i, 21, label="箱容单位")
+    worksheet.write(i, 22, label="保质期")
+
+    # 保存文件为excel
+    workbook.save('爱采购爬虫.xls')
 
     print('=======================数据写入excel,图片保存到文件夹结束==================================')
 
-    break
+    # 测试阶段,爬取一个商品进行测试
+    # break
 
 print('===================================================================')

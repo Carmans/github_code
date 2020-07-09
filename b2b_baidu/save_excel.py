@@ -1,7 +1,7 @@
 #采集的数据保存到excel
 import xlwt
 
-features= {'word': '路边', 'frequency': 18}
+features= {'word': '路边', 'age': 18}
 
 # 创建workbook（其实就是excel，后来保存一下就行）
 workbook = xlwt.Workbook(encoding='utf-8')
@@ -14,23 +14,23 @@ worksheet.write(0, 1, label="frequency")
 i = 1
 for word in features:
     worksheet.write(i, 0, label=features[word])
-    worksheet.write(i, 1, label=features[frequency])
+    worksheet.write(0, 1, label=features[age])
     i = i + 1
 workbook.save('Excel_Workbook.xls')
 
 
 
 # 将爬取结果输出到excel内进行保存
-workbook = xlwt.Workbook(encoding='utf-8')
-
-worksheet = workbook.add_sheet('{}'.format(key))  # 创建一个Excel,在其中创建一个名为first的sheet
+# workbook = xlwt.Workbook(encoding='utf-8')
+#
+# worksheet = workbook.add_sheet('{}'.format(key))  # 创建一个Excel,在其中创建一个名为first的sheet
 
 # worksheet.write(0, 0, label="word")
 # worksheet.write(0, 1, label="frequency")
 
-
-for item in temp:
-    print(item)
+#
+# for item in temp:
+#     print(item)
     # print(len(item))
     # print(item['id'])
     # worksheet.write(j, i, label=item[item_1])
@@ -66,3 +66,23 @@ for item in temp:
 
 # 保存文件为excel
 # workbook.save('爱采购爬虫.xls')
+
+
+
+
+# coding=utf-8
+import xlwt
+import xlrd
+
+
+# 创建excel文件
+filename = xlwt.Workbook()
+# 给工作表命名，test
+sheet = filename.add_sheet("test")
+# 写入内容，第4行第3列写入‘张三丰’
+hello = u'张三丰'
+hello1 = u'张四丰'
+sheet.write(0, 0, hello)
+sheet.write(0, 1, hello1)
+# 指定存储路径，如果当前路径存在同名文件，会覆盖掉同名文件
+filename.save("./test1.xls")
