@@ -12,7 +12,7 @@ import json
 import xlwt
 import math
 import os
-import parse
+
 
 
 def url_open(url):
@@ -108,13 +108,20 @@ def produceImage(file_in, file_out):
     resized_image.save(file_out)
 
 
-def download(folder='mm', pages=10):
-    url = 'http://www.meizitu.com/a/more_1.html'
-    os.mkdir(folder)
-    os.chdir(folder)
-    urllist = get_page(url)  # 获取第一页中所有超链接
-    img_url = get_img_url(urllist)  # 获取每个超链接中所有图片地址
-    save_excel(img_url)
+def download_pic(picList):
+    for j in range(len(picList)):
+        # 下载图片
+        os.makedirs('./image/', exist_ok=True)
+        r = requests.post(picList[j], headers=headers)
+        with open('./image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j), 'wb') as f:
+            for chunk in r.iter_content(chunk_size=1024):
+                f.write(chunk)
+
+        # 图片缩放为指定大小
+        produceImage('./image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j),
+                     './image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j))
+
+        j += 1
 
 
 if __name__ == '__main__':
@@ -131,4 +138,4 @@ if __name__ == '__main__':
         key) + '&p={}'.format(
         p + 1) + '&sa=&mk=全部结果&f=[]&s=30&adn=0&resType=product&fn={"select_param0":"品牌","select_param1":"产品类别","select_param2":"口味"}'
 
-    download()
+    download_pic()

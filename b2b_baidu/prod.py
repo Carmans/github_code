@@ -134,22 +134,28 @@ for i in range(len(jUrl)):
     print(type(data))
 
     # 供货方信息提取
-    provider = data['provider']
-    print(provider)
     # 供货方名称
-    provider = data['provider']['status']
+    name = data['provider']['name']
     # 供货方状态
-    provider = data['provider']['name']
-
-    provider = data['provider']['name']
-    provider = data['provider']['name']
-    provider = data['provider']['name']
-    provider = data['provider']['name']
-    provider = data['provider']['name']
+    status = data['provider']['status']
+    # 注册资本
+    regCap = data['provider']['regCap']
+    # 所在地址
+    regAddr = data['provider']['regAddr']
+    # 范围
+    scope = data['provider']['scope']
+    # 企业类型
+    entType = data['provider']['entType']
+    # 店铺链接
+    jumpUrl = data['provider']['jumpUrl']
+    # LOGO
+    logo = data['provider']['logo']
 
     # 卖家信息
-    sellerInfo = data['sellerInfo']
-    print(sellerInfo)
+    # 联系人
+    contactName = data['sellerInfo']['contactName']
+    # 联系地址
+    externalAddress = data['sellerInfo']['externalAddress']
 
     # 获取商品详情信息
     item = data['item']
@@ -162,7 +168,7 @@ for i in range(len(jUrl)):
     fullName = item['fullName']
     print('商品标题: %s ' % fullName)
 
-    # 商品69码
+    # 商品详情信息
     meta = item['meta']
     # 商品条形码
     sku = ''
@@ -278,19 +284,18 @@ for i in range(len(jUrl)):
     worksheet = workbook.add_sheet('{}'.format(key))
     # 往单元格内写入内容:写入表头
     worksheet.write(0, 0, label="厂商名称")
-    worksheet.write(0, 1, label=brand)
+    worksheet.write(0, 1, label="品牌")
     worksheet.write(0, 2, label="子品牌")
     worksheet.write(0, 3, label="商品品类1级")
     worksheet.write(0, 4, label="商品品类2级")
     worksheet.write(0, 5, label="商品名称")
-    worksheet.write(0, 6, label=sku)
+    worksheet.write(0, 6, label="商品条形码")
     worksheet.write(0, 7, label="单品规格")
     worksheet.write(0, 8, label="单品计量")
     worksheet.write(0, 9, label="单品计量单位")
     worksheet.write(0, 10, label="销售规格")
     worksheet.write(0, 11, label="销售规格系数")
     worksheet.write(0, 12, label="销售指导价格")
-    worksheet.write(0, 13, label="")
     worksheet.write(0, 14, label="商品描述")
     worksheet.write(0, 15, label="商品详细描述")
     worksheet.write(0, 16, label="备注")
@@ -299,14 +304,14 @@ for i in range(len(jUrl)):
     worksheet.write(0, 19, label="箱重单位")
     worksheet.write(0, 20, label="箱容")
     worksheet.write(0, 21, label="箱容单位")
-    worksheet.write(0, 22, label=Packing_specification)
+    worksheet.write(0, 22, label="保质期")
 
     i += 1
     print(i)
     # 写入数据到excel
-    worksheet.write(i, 0, label="厂商名称")
-    worksheet.write(i, 1, label="品牌")
-    worksheet.write(i, 2, label="子品牌")
+    worksheet.write(i, 0, label=name)
+    worksheet.write(i, 1, label=brand)
+    worksheet.write(i, 2, label="")
     worksheet.write(i, 3, label="商品品类1级")
     worksheet.write(i, 4, label="商品品类2级")
     worksheet.write(i, 5, label="商品名称")
@@ -317,7 +322,6 @@ for i in range(len(jUrl)):
     worksheet.write(i, 10, label="销售规格")
     worksheet.write(i, 11, label="销售规格系数")
     worksheet.write(i, 12, label="销售指导价格")
-    worksheet.write(i, 13, label="商品图片")
     worksheet.write(i, 14, label="商品描述")
     worksheet.write(i, 15, label="商品详细描述")
     worksheet.write(i, 16, label="备注")
@@ -326,7 +330,7 @@ for i in range(len(jUrl)):
     worksheet.write(i, 19, label="箱重单位")
     worksheet.write(i, 20, label="箱容")
     worksheet.write(i, 21, label="箱容单位")
-    worksheet.write(i, 22, label="保质期")
+    worksheet.write(i, 22, label=Shelf_life)
 
     # 保存文件为excel
     workbook.save('爱采购爬虫.xls')
@@ -334,6 +338,6 @@ for i in range(len(jUrl)):
     print('=======================数据写入excel,图片保存到文件夹结束==================================')
 
     # 测试阶段,爬取一个商品进行测试
-    break
+    # break
 
 print('===================================================================')
