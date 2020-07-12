@@ -136,16 +136,16 @@ for i in range(len(jUrl)):
     # 供货方信息提取
     provider = data['provider']
     print(provider)
-    #供货方名称
-    provider=data['provider']['status']
+    # 供货方名称
+    provider = data['provider']['status']
     # 供货方状态
-    provider=data['provider']['name']
+    provider = data['provider']['name']
 
-    provider=data['provider']['name']
-    provider=data['provider']['name']
-    provider=data['provider']['name']
-    provider=data['provider']['name']
-    provider=data['provider']['name']
+    provider = data['provider']['name']
+    provider = data['provider']['name']
+    provider = data['provider']['name']
+    provider = data['provider']['name']
+    provider = data['provider']['name']
 
     # 卖家信息
     sellerInfo = data['sellerInfo']
@@ -166,77 +166,77 @@ for i in range(len(jUrl)):
     meta = item['meta']
     # 商品条形码
     sku = ''
-    #品牌
-    brand=''
-    #保质期
-    Shelf_life=''
-    #原产地
-    place_of_origin=''
-    #是否进口
-    is_import=''
+    # 品牌
+    brand = ''
+    # 保质期
+    Shelf_life = ''
+    # 原产地
+    place_of_origin = ''
+    # 是否进口
+    is_import = ''
     # 可售卖地
-    Sales_area=''
-    #等级
-    level=''
-    #品种
-    varieties=''
+    Sales_area = ''
+    # 等级
+    level = ''
+    # 品种
+    varieties = ''
     # 售卖方式
-    Selling_way=''
+    Selling_way = ''
     # 包装系列
-    Packaging_series=''
-    #产品标准号
-    Product_standard_No=''
+    Packaging_series = ''
+    # 产品标准号
+    Product_standard_No = ''
     # 生产许可证编号
-    Production_license=''
+    Production_license = ''
     # 生产日期
-    created=''
+    created = ''
     # 储藏方法
-    Storage_method=''
+    Storage_method = ''
     # 净含量（规格）
-    specifications=''
+    specifications = ''
     # 货号
-    product_no=''
-    #包装规格
-    Packing_specification=''
+    product_no = ''
+    # 包装规格
+    Packing_specification = ''
 
     print('  2     i的值为: %s:' % i)
     for z in range(len(meta)):
         if meta[z]['k'] == '商品条形码':
             sku = meta[z]['v']
-        elif meta[i]['k'] == '品牌':
-            brand = meta[i]['v']
-        elif meta[i]['k'] == '保质期':
-            Shelf_life = meta[i]['v']
-        elif meta[i]['k'] == '原产地':
-            place_of_origin = meta[i]['v']
-        elif meta[i]['k'] == '是否进口':
-            is_import = meta[i]['v']
-        elif meta[i]['k'] == '可售卖地':
-            Sales_area= meta[i]['v']
-        elif meta[i]['k'] == '等级':
-            level = meta[i]['v']
-        elif meta[i]['k'] == '品种':
-            varieties = meta[i]['v']
-        elif meta[i]['k'] == '售卖方式':
-            Selling_way = meta[i]['v']
-        elif meta[i]['k'] == '包装系列':
-            Packaging_series = meta[i]['v']
-        elif meta[i]['k'] == '货号':
-            product_no = meta[i]['v']
-        elif meta[i]['k'] == '货号':
-            product_no = meta[i]['v']
-        elif meta[i]['k'] == '产品标准号':
-            Product_standard_No = meta[i]['v']
-        elif meta[i]['k'] == '生产许可证编号':
-            Production_license = meta[i]['v']
-        elif meta[i]['k'] == '生产日期':
-            created = meta[i]['v']
-        elif meta[i]['k'] == '储藏方法':
-            Storage_method = meta[i]['v']
-        elif meta[i]['k'] == '净含量':
-            specifications = meta[i]['v']
-        elif meta[i]['k'] == '包装规格':
-            Packing_specification = meta[i]['v']
+        elif meta[z]['k'] == '品牌':
+            brand = meta[z]['v']
+        elif meta[z]['k'] == '保质期':
+            Shelf_life = meta[z]['v']
+        elif meta[z]['k'] == '原产地':
+            place_of_origin = meta[z]['v']
+        elif meta[z]['k'] == '是否进口':
+            is_import = meta[z]['v']
+        elif meta[z]['k'] == '可售卖地':
+            Sales_area = meta[z]['v']
+        elif meta[z]['k'] == '等级':
+            level = meta[z]['v']
+        elif meta[z]['k'] == '品种':
+            varieties = meta[z]['v']
+        elif meta[z]['k'] == '售卖方式':
+            Selling_way = meta[z]['v']
+        elif meta[z]['k'] == '包装系列':
+            Packaging_series = meta[z]['v']
+        elif meta[z]['k'] == '货号':
+            product_no = meta[z]['v']
+        elif meta[z]['k'] == '货号':
+            product_no = meta[z]['v']
+        elif meta[z]['k'] == '产品标准号':
+            Product_standard_No = meta[z]['v']
+        elif meta[z]['k'] == '生产许可证编号':
+            Production_license = meta[z]['v']
+        elif meta[z]['k'] == '生产日期':
+            created = meta[z]['v']
+        elif meta[z]['k'] == '储藏方法':
+            Storage_method = meta[z]['v']
+        elif meta[z]['k'] == '净含量':
+            specifications = meta[z]['v']
+        elif meta[z]['k'] == '包装规格':
+            Packing_specification = meta[z]['v']
         else:
             print('1')
             break
@@ -258,12 +258,13 @@ for i in range(len(jUrl)):
         # 下载图片
         os.makedirs('./image/', exist_ok=True)
         r = requests.post(picList[j], headers=headers)
-        with open('./image/{}_'.format(sku) + '{}.jpg'.format(j), 'wb') as f:
+        with open('./image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j), 'wb') as f:
             for chunk in r.iter_content(chunk_size=1024):
                 f.write(chunk)
 
         # 图片缩放为指定大小
-        produceImage('./image/{}_'.format(sku) + '{}.jpg'.format(j), './image/{}_'.format(sku) + '{}.jpg'.format(j))
+        produceImage('./image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j),
+                     './image/{}_'.format(i) + '{}_'.format(sku) + '{}.jpg'.format(j))
 
         j += 1
 
@@ -333,6 +334,6 @@ for i in range(len(jUrl)):
     print('=======================数据写入excel,图片保存到文件夹结束==================================')
 
     # 测试阶段,爬取一个商品进行测试
-    # break
+    break
 
 print('===================================================================')

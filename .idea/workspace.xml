@@ -20,20 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b46f80d-fbd6-4070-b6d2-1f05edcc2c6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/b2b_baidu/parse.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/6928872808309_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/6928872808309_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/Excel_Workbook.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/getJson.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/getJson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6928872808309_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6928872808309_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6928872808309_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6928872808309_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6928872808309_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/0_6932430214426_0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/0_6932430214426_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/0_6932430214426_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/0_6932430214426_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6932430214426_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/0_6932430214426_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6972615280334_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6972615280334_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6972615280334_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6972615280334_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/6972615280334_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/1__0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/1__1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/1__2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/1__3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/image/1__4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/image/_7.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/b2b_baidu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/parse_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/pic_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/pic_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/b2b_baidu/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/prod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/result.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/save_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/save_excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2b_baidu/爱采购爬虫.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/prod_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/prod_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2b_baidu/爱采购爬虫.xls" beforeDir="false" afterPath="$PROJECT_DIR$/b2b_baidu/爱采购爬虫.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="parse_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="parse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="github_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,7 +138,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/b2b_baidu/parse_test.py" />
+      <option name="SCRIPT_NAME" value="E:\github_code\b2b_baidu\parse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,6 +239,7 @@
       <workItem from="1593753435828" duration="25069000" />
       <workItem from="1594009634833" duration="27970000" />
       <workItem from="1594259305474" duration="8710000" />
+      <workItem from="1594547605749" duration="8879000" />
     </task>
     <task id="LOCAL-00001" summary="网站解析部分的代码的编写">
       <created>1593474343326</created>
@@ -320,28 +339,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="109" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593443839537" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594292102516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom" timestamp="1594563185583">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1031" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594563185583" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
     <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594292102516" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594292102516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="225" key="GridCell.Tab.0.center" timestamp="1594563185582">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1031" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
+    <state width="1493" height="225" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594563185582" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
     <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594292102516" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594292102516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="225" key="GridCell.Tab.0.left" timestamp="1594563185582">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1031" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093158" />
+    <state width="1493" height="225" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594563185582" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
     <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594292102516" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594292102516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="225" key="GridCell.Tab.0.right" timestamp="1594563185582">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1031" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593729093159" />
+    <state width="1493" height="225" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594563185582" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593474355040" />
     <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594292102516" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1594206865547">
@@ -374,9 +393,10 @@
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1593474345341" />
     <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594206833038" />
-    <state x="1920" y="0" width="1627" height="1028" key="dock-window-1" timestamp="1594272482104">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2328" y="50" width="1262" height="812" maximized="true" key="dock-window-1" timestamp="1594563757235">
+      <screen x="1920" y="0" width="1366" height="984" />
     </state>
+    <state x="2328" y="50" width="1262" height="812" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594563757235" />
     <state x="1920" y="0" width="1627" height="1028" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594272482104" />
     <state x="2181" y="91" width="1627" height="716" maximized="true" key="dock-window-2" timestamp="1594275792255">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -387,19 +407,31 @@
     </state>
     <state x="467" y="199" key="git4idea.merge.GitPullDialog/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1593702288340" />
     <state x="584" y="251" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1593916852532" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594271394193">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1594565323192">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/1920.0.1366.984@0.0.1536.824" timestamp="1594565323192" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594271394193" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/b2b_baidu/code_utf8.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/github_code$b2b_test.coverage" NAME="b2b_test Coverage Results" MODIFIED="1594126372676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$main.coverage" NAME="main Coverage Results" MODIFIED="1594272107679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$prod_item.coverage" NAME="prod_item Coverage Results" MODIFIED="1593945424675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$code_utf8.coverage" NAME="code_utf8 Coverage Results" MODIFIED="1593728003993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$save_excel.coverage" NAME="save_excel Coverage Results" MODIFIED="1594271870355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$b2b_test.coverage" NAME="b2b_test Coverage Results" MODIFIED="1594126372676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$parse_test.coverage" NAME="parse_test Coverage Results" MODIFIED="1594186454837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$main.coverage" NAME="main Coverage Results" MODIFIED="1594272107679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
     <SUITE FILE_PATH="coverage/github_code$pic_test.coverage" NAME="pic_test Coverage Results" MODIFIED="1594203439295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
-    <SUITE FILE_PATH="coverage/github_code$prod.coverage" NAME="prod Coverage Results" MODIFIED="1594291995997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$save_excel.coverage" NAME="save_excel Coverage Results" MODIFIED="1594271870355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$prod.coverage" NAME="prod Coverage Results" MODIFIED="1594562403101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
+    <SUITE FILE_PATH="coverage/github_code$code_utf8.coverage" NAME="code_utf8 Coverage Results" MODIFIED="1593728003993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/b2b_baidu" />
   </component>
 </project>
